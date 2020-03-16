@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>May's Used Car Shop</title>
+    <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+       
+        <link rel="stylesheet" href="/public/stylesheets/themes/my-custom-theme.min.css" />
+        <link rel="stylesheet" href="/public/stylesheets/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+ 
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/public/javascripts/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+
+</head>
+
+<body>
+  
+    <!-- Start of  page -->
+    <div data-role="page"  id="home">
+        <!--   page header -->
+        <div data-role="header" data-theme='a'>
+            <!-- helpful location   -->
+            <!-- https://demos.jquerymobile.com/1.2.0/docs/toolbars/docs-navbar.html -->
+
+            <h1>May's Used Car Shop</h1>
+            <div data-role="navbar" >
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#Load">Add Cars</a></li>
+                    <li><a href="#ListAll">List Cars</a></li>
+        
+                </ul>
+                </div><!-- /navbar -->
+            
+        </div>
+        <!--   page content -->
+        <div data-role="content" data-theme='a'>
+            <h2> Purchase your Dream Car Today </h2>
+            <h3> Contact (123) 456-7890 for more details! </h3>
+            <img src="/public/images/CAR1.jpeg" alt="Picture"width="181" height="181" >
+            <img src="/public/images/CAR6.jpeg" alt="Picture" width="200" height="181" >
+            <img src="/public/images/CAR7.jpeg" alt="Picture" width="200" height="181" >
+            <img src="/public/images/CAR8.jpeg" alt="Picture" width="200" height="181" >
+        </div>
+            
+        <!--  page footer -->
+        <div data-role="footer" data-theme='a'>
+                <h1>Copyrigtht 2020 by May Kwon</h1>
+        </div>
+    </div>
+
+
+    <div data-role="page"  id="Load">
+        <!--  page header -->
+        <div data-role="header" data-theme='a'>
+            <h1>May's Used Car Shop</h1>
+            <div data-role="navbar" >
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#Load">Add Cars</a></li>
+                    <li><a href="#ListAll">List Cars</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+        <!-- page content -->
+        <div data-role="content" data-theme='a'>
+            <h2>Add a Car to Sell</h2>
+            <form>
+                <div class="ui-field-contain">
+                <label for="select-make">Select Make</label>
+                <select name="select-make" id="select-make">
+                    <option value="Acura">Acura</option>
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                </select>
+                </div>
+            </form>
+            Enter Model <br />
+            <input type="text" value="" id="model" />
+            Enter Year Made <br />
+            <input type="text" value="" id="year" />
+            Enter Mileage <br />
+            <input type="text" value="" id="mile" />
+            Enter Price <br />
+            <input type="text" value="" id="price" />
+            
+            <input type="button" value="Click To Add" id="buttonAdd"  data-inline="true" />
+                <input type="button" value="Clear Data" id="buttonClear"  data-inline="true" />
+        </div>
+            
+        <!--   page footer -->
+        <div data-role="footer" data-theme='a'>
+            <h1>Copyrigtht 2020 by May Kwon</h1>
+        </div>
+    </div>
+
+
+
+
+    <div data-role="page"  id="ListAll">
+            <!--   page header -->
+        <div data-role="header" data-theme='b'>
+            <h1>May's Used Car Shop</h1>
+            <div data-role="navbar" >
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#Load">Add Cars</a></li>
+                    <li><a href="#ListAll">List Cars</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+
+            <!-- LisAll   page content -->
+        <div data-role="content" data-theme='b'>
+            <p> Here are list of available cars to purchase (Make / Model / Price)</p>
+            <div id="divCarList"></div>
+            <input type="button" value="Sort By Make" id="buttonSortMake" data-inline="true"  />
+            <input type="button" value="Sort By Price" id="buttonSortPrice" data-inline="true"   />
+            <br />
+            <br />
+            Enter Car Model to Delete <br />
+            <input type="text" value="" id="deleteModel" data-inline="true" />
+            <input type="button" value="Delete Car by Model" id="buttonDelete" data-inline="true"   />
+        </div>
+              
+            <!--   page footer -->
+            <div data-role="footer" data-theme='a'>
+              <h1>Copyrigtht 2020 by May Kwon</h1>
+            </div>
+        </div>
+    </div>      
+    
+    <!-- Start of  page -->
+    <div data-role="page"  id="detailPage">
+        <!--   page header -->
+        <div data-role="header" data-theme='b'> 
+            <h1>May's Used Car Shop</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#Load">Add Cars</a></li>
+                    <li><a href="#ListAll">List Cars</a></li>
+
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+        <!--  content -->
+        <div data-role="content" data-theme='b'>
+            <div>
+                <p id="IDparmHere" hidden>change1</p>  <!-- hidden    a place to stash the movie title -->
+                <p class="bold" > Here are the details</p>
+                <p><span class="bold"> Make: </span> <span id="oneMake"> </span>  </p>
+                <p><span class="bold"> Model: </span> <span id="oneModel"> </span>  </p>
+                <p><span class="bold"> Year: </span> <span id="oneYear"> </span>  </p>
+                <p><span class="bold"> Mileage: </span> <span id="oneMile"> </span>  </p>
+                <p><span class="bold"> Price: </span> <span id="onePrice"> </span>  </p>
+
+            </div>
+        </div>
+            
+        <!--    footer -->
+        <div data-role="footer" data-theme='b  '>
+            <h1>Copyrigtht 2020 by May Kwon</h1>
+        </div>
+   
+    </div>  
+
+    <!-- Start of  page -->
+    <div data-role="page"  id="refreshPage">
+       <!--  content -->
+        <div data-role="content" >
+              <!--  this page is used to to jump to and then back to a page to force a pagebeforeload event -->
+        </div>
+    </div>  
+
+</body>
